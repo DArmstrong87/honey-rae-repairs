@@ -1,6 +1,6 @@
 import React from "react"
 import { CustomerList } from "./customers/CustomerList.js"
-import { EmployeesList } from "./EmployeesList.js"
+import { EmployeeList } from "./EmployeeList.js"
 
 export const Repairs = () => {
     return (
@@ -8,7 +8,7 @@ export const Repairs = () => {
             <h1>Honey Rae Repairs</h1>
             {CustomerList()}
             <h1>Employees</h1>
-            {EmployeesList()}
+            {EmployeeList()}
         </>
     )
 }
