@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 
 export const EmployeeList = () => {
     const [employees, changeEmployee] = useState([])
-    const [specialties, updateSpecialties] = useState(",")
+    const [specialtiesList, updateSpecialties] = useState("")
 
     useEffect(
         () => {
@@ -18,23 +18,14 @@ export const EmployeeList = () => {
     useEffect(() => {
         const specialties = employees.map(employee => {
             return employee.specialty
-        })
+        }).join(", ")
 
         updateSpecialties(specialties)
-        
-        /*
-            1. Use .map() to get the specialty of each employee
-            2. Then update a state variable to be a comma-separated string
-                (e.g. "iPhone, Printers, ...")
-        */
+
     }, [employees])
 
     return (
         <>
-            <div>
-                Specialties:
-                {specialties}
-            </div>
             {
                 employees.map(
                     (employee) => {
@@ -42,6 +33,10 @@ export const EmployeeList = () => {
                     }
                 )
             }
+            <div>
+                <h3>Specialties:</h3>
+                <p>{specialtiesList}</p>
+            </div>
         </>
     )
 }
