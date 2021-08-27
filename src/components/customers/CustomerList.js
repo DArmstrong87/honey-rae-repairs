@@ -28,6 +28,7 @@ export const CustomerList = () => {
 
     return (
         <>
+        <h2>Customers</h2>
             <div>{totalCustomerMessage}</div>
             { //Interpolate without using dollar sign
                 customers.slice(0,5).map((customer) => {

@@ -2,12 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Repairs } from './components/Repairs.js';
 import './index.css';
+import { BrowserRouter } from 'react-router-dom';
 
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
+    <BrowserRouter>
     <Repairs />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

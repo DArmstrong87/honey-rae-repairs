@@ -16,6 +16,8 @@ export const TicketList = () => {
 
     return (
         <>
+                <h2>Service Tickets</h2>
+
             {
                 tickets.map(
                     (ticket) => {
