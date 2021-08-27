@@ -2,6 +2,7 @@ import React from "react"
 import { Route } from "react-router-dom"
 import { CustomerList } from "./customers/CustomerList"
 import { EmployeeList } from "./EmployeeList"
+import { TicketForm } from "./serviceTickets/TicketForm"
 import { TicketList } from "./serviceTickets/TicketList"
 
 // Sole responsibility of this module is to listen for when the url is changed and render the specific component.
@@ -17,6 +18,9 @@ export const ApplicationViews = () => {
             </Route>
             <Route exact path="/tickets">
                 <TicketList />
+            </Route>
+            <Route path="/tickets/create">
+                <TicketForm />
             </Route>
         </>
     )
