@@ -26,6 +26,9 @@ export const EmployeeList = () => {
 
     return (
         <>
+            <div>
+                Specialties: {specialtiesList}
+            </div>
             {
                 employees.map(
                     (employee) => {
@@ -33,10 +36,6 @@ export const EmployeeList = () => {
                     }
                 )
             }
-            <div>
-                <h3>Specialties:</h3>
-                <p>{specialtiesList}</p>
-            </div>
         </>
     )
 }
