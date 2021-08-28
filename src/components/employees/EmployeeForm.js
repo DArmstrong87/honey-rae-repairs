@@ -71,7 +71,7 @@ export const EmployeeForm = () => {
                 </div>
             </fieldset>
             <button className="btn btn-primary" onClick={submitEmployee}>
-                Create Employee
+                Finish Hiring
             </button>
         </form>
     )
