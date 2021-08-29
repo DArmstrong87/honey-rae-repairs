@@ -4,9 +4,15 @@
     padding: 5px;
     margin-left: 1em;
 }
+
 .ticket {
     background-color:lightgray;
     max-width: 30em;
     padding: 5px;
     margin-left: 1em;
+}
+
+.deleteButton {
+    margin-left: 25px;
+    max-width: fit-content;
 }
