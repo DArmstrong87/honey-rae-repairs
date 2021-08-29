@@ -24,7 +24,7 @@ export const TicketList = () => {
                     Create Ticket</button>
             </div>
             <h2>Service Tickets</h2>
-
+            <h4>There are {tickets.length} open tickets.</h4>
             {
                 tickets.map(
                     (ticket) => {
