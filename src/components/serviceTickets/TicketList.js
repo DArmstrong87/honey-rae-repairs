@@ -6,11 +6,19 @@ import "./Tickets.css"
 export const TicketList = () => {
     const [tickets, setTicket] = useState([])
     const history = useHistory()
+
     const deleteTicket = (id) => {
         fetch(`http://localhost:8088/serviceTickets/${id}`, {
             method: "DELETE"
         })
-            .then(history.go())
+            .then(() => {
+                getTicekts()
+                    .then((data) => {
+                        setTicket(data)
+                    })
+            },
+                []
+            )
     }
 
     useEffect(
